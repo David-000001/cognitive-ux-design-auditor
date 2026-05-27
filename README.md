@@ -5,9 +5,6 @@
 **Cognitive UX Design Auditor**  
 An explainable rule-based expert system for auditing cognitive usability issues in user interface design.
 
-## What was fixed
-
-The original project already had the expert-system logic, but it looked like a normal 3-section Streamlit form. This fixed version makes the expert-system structure obvious by adding:
 
 1. Expert System Architecture tab
 2. Run UX Audit tab
