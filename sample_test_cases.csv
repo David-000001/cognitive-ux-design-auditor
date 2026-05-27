@@ -1,0 +1,4 @@
+Test ID,Scenario,main_options,grouped_options,primary_action_clear,same_action_uses_different_labels,user_must_remember_previous_info,hints_available,required_fields_exist,required_fields_marked,error_message_actionable,navigation_clear,current_location_visible,text_readable,contrast_sufficient,spacing_crowded,Expected Risk
+T1,Overloaded dashboard,12,No,No,Yes,No,Yes,No,Yes,Yes,No,No,Yes,Yes,Yes,High
+T2,Weak form validation,6,No,Yes,No,Yes,No,Yes,No,No,Yes,Yes,Yes,Yes,No,High
+T3,Balanced UI,4,Yes,Yes,No,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Low

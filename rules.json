@@ -1,0 +1,207 @@
+[
+  {
+    "id": "R1",
+    "category": "Cognitive Load",
+    "issue": "High Cognitive Load",
+    "conditions": [
+      {
+        "fact": "main_options",
+        "operator": ">",
+        "value": 7
+      },
+      {
+        "fact": "grouped_options",
+        "operator": "==",
+        "value": "No"
+      }
+    ],
+    "severity": "High",
+    "recommendation": "Group related options, remove unnecessary choices, and split complex actions into smaller sections.",
+    "explanation": "The interface shows too many visible options without grouping, which increases mental effort."
+  },
+  {
+    "id": "R2",
+    "category": "Visual Hierarchy",
+    "issue": "Poor Visual Hierarchy",
+    "conditions": [
+      {
+        "fact": "primary_action_clear",
+        "operator": "==",
+        "value": "No"
+      }
+    ],
+    "severity": "High",
+    "recommendation": "Make the primary action visually dominant using clearer placement, size, spacing, or button emphasis.",
+    "explanation": "Users may not immediately know what action to take next."
+  },
+  {
+    "id": "R3",
+    "category": "Consistency",
+    "issue": "Label Inconsistency",
+    "conditions": [
+      {
+        "fact": "same_action_uses_different_labels",
+        "operator": "==",
+        "value": "Yes"
+      }
+    ],
+    "severity": "Medium",
+    "recommendation": "Use the same wording for the same action across all screens.",
+    "explanation": "Different labels for the same action can make users question whether the actions are different."
+  },
+  {
+    "id": "R4",
+    "category": "Recognition vs Recall",
+    "issue": "High Memory Load",
+    "conditions": [
+      {
+        "fact": "user_must_remember_previous_info",
+        "operator": "==",
+        "value": "Yes"
+      },
+      {
+        "fact": "hints_available",
+        "operator": "==",
+        "value": "No"
+      }
+    ],
+    "severity": "High",
+    "recommendation": "Provide contextual hints, summaries, previous selections, or visible guidance so users do not need to rely on memory.",
+    "explanation": "The system forces users to remember information from earlier screens without support."
+  },
+  {
+    "id": "R5",
+    "category": "Error Prevention",
+    "issue": "Weak Error Prevention",
+    "conditions": [
+      {
+        "fact": "required_fields_exist",
+        "operator": "==",
+        "value": "Yes"
+      },
+      {
+        "fact": "required_fields_marked",
+        "operator": "==",
+        "value": "No"
+      }
+    ],
+    "severity": "Medium",
+    "recommendation": "Clearly mark required fields and provide validation hints before submission.",
+    "explanation": "Users may submit incomplete forms because required fields are not visible."
+  },
+  {
+    "id": "R6",
+    "category": "Feedback & Recovery",
+    "issue": "Poor Error Recovery",
+    "conditions": [
+      {
+        "fact": "error_message_actionable",
+        "operator": "==",
+        "value": "No"
+      }
+    ],
+    "severity": "High",
+    "recommendation": "Rewrite error messages to explain what went wrong and how the user can fix it.",
+    "explanation": "Vague error messages increase confusion and slow down task recovery."
+  },
+  {
+    "id": "R7",
+    "category": "Navigation Clarity",
+    "issue": "Unclear Navigation",
+    "conditions": [
+      {
+        "fact": "navigation_clear",
+        "operator": "==",
+        "value": "No"
+      }
+    ],
+    "severity": "Medium",
+    "recommendation": "Use clearer menu labels, visible next-step guidance, and consistent navigation placement.",
+    "explanation": "Users may not know where they are or what path to follow."
+  },
+  {
+    "id": "R8",
+    "category": "Navigation Clarity",
+    "issue": "No Current Location Indicator",
+    "conditions": [
+      {
+        "fact": "current_location_visible",
+        "operator": "==",
+        "value": "No"
+      }
+    ],
+    "severity": "Medium",
+    "recommendation": "Add breadcrumbs, active menu states, page titles, or progress indicators.",
+    "explanation": "The user cannot easily identify their current position in the interface."
+  },
+  {
+    "id": "R9",
+    "category": "Readability",
+    "issue": "Poor Readability",
+    "conditions": [
+      {
+        "fact": "text_readable",
+        "operator": "==",
+        "value": "No"
+      }
+    ],
+    "severity": "Medium",
+    "recommendation": "Increase font size, improve spacing, and simplify long text blocks.",
+    "explanation": "Hard-to-read text increases cognitive effort and reduces task speed."
+  },
+  {
+    "id": "R10",
+    "category": "Readability",
+    "issue": "Low Visual Contrast",
+    "conditions": [
+      {
+        "fact": "contrast_sufficient",
+        "operator": "==",
+        "value": "No"
+      }
+    ],
+    "severity": "High",
+    "recommendation": "Improve contrast between text, buttons, icons, and background.",
+    "explanation": "Low contrast makes important information difficult to notice."
+  },
+  {
+    "id": "R11",
+    "category": "Cognitive Load",
+    "issue": "Crowded Layout",
+    "conditions": [
+      {
+        "fact": "spacing_crowded",
+        "operator": "==",
+        "value": "Yes"
+      }
+    ],
+    "severity": "Medium",
+    "recommendation": "Increase whitespace, group related items, and reduce unnecessary elements.",
+    "explanation": "Crowded spacing makes scanning harder and increases cognitive effort."
+  },
+  {
+    "id": "R12",
+    "category": "Cognitive Load",
+    "issue": "Moderate Cognitive Load",
+    "conditions": [
+      {
+        "fact": "main_options",
+        "operator": ">=",
+        "value": 5
+      },
+      {
+        "fact": "main_options",
+        "operator": "<=",
+        "value": 7
+      },
+      {
+        "fact": "grouped_options",
+        "operator": "==",
+        "value": "No"
+      }
+    ],
+    "severity": "Medium",
+    "recommendation": "Group related options and make the most common actions easier to find.",
+    "explanation": "The number of options is not extreme, but lack of grouping can still slow down users."
+  }
+]
