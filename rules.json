@@ -1,0 +1,427 @@
+[
+  {
+    "id": "CL1",
+    "category": "Cognitive Load",
+    "theory": "George A. Miller - Miller's Law",
+    "concept": "Limited working-memory chunks",
+    "issue": "Too many visible options",
+    "conditions": [
+      {"fact": "main_options", "operator": ">", "value": 7}
+    ],
+    "severity": "High",
+    "score": 3,
+    "recommendation": "Reduce visible choices, group related actions, and highlight the few actions users need most often.",
+    "explanation": "The screen shows more than seven main options, which can exceed comfortable working-memory processing for beginner users."
+  },
+  {
+    "id": "CL2",
+    "category": "Cognitive Load",
+    "theory": "John Sweller - Cognitive Load Theory",
+    "concept": "Extraneous cognitive load",
+    "issue": "Moderate option load without grouping",
+    "conditions": [
+      {"fact": "main_options", "operator": ">=", "value": 5},
+      {"fact": "main_options", "operator": "<=", "value": 7},
+      {"fact": "grouped_options", "operator": "==", "value": "No"}
+    ],
+    "severity": "Medium",
+    "score": 2,
+    "recommendation": "Group related options into sections so users can scan the screen faster.",
+    "explanation": "The number of options is not extreme, but ungrouped options increase unnecessary mental effort."
+  },
+  {
+    "id": "CL3",
+    "category": "Cognitive Load",
+    "theory": "Alan Baddeley - Working Memory Model",
+    "concept": "Central executive bottleneck",
+    "issue": "Too many task steps",
+    "conditions": [
+      {"fact": "task_steps", "operator": ">", "value": 4}
+    ],
+    "severity": "Medium",
+    "score": 2,
+    "recommendation": "Reduce the number of steps or break the task into a guided step-by-step flow.",
+    "explanation": "More than four steps for a main task increases planning effort and attention switching."
+  },
+  {
+    "id": "CL4",
+    "category": "Cognitive Load",
+    "theory": "John Sweller - Cognitive Load Theory",
+    "concept": "Information overload",
+    "issue": "Too many unrelated information blocks",
+    "conditions": [
+      {"fact": "unrelated_info_blocks", "operator": ">", "value": 3}
+    ],
+    "severity": "High",
+    "score": 3,
+    "recommendation": "Remove irrelevant blocks, hide secondary details, or separate the screen into clearer sections.",
+    "explanation": "Unrelated information competes for attention and increases extraneous cognitive load."
+  },
+  {
+    "id": "VH1",
+    "category": "Visual Hierarchy",
+    "theory": "Feature Integration Theory",
+    "concept": "Selective attention",
+    "issue": "Multiple competing primary actions",
+    "conditions": [
+      {"fact": "primary_cta_count", "operator": ">", "value": 1}
+    ],
+    "severity": "Medium",
+    "score": 2,
+    "recommendation": "Keep one main primary action per screen and make secondary actions visually quieter.",
+    "explanation": "When several buttons look primary, users need extra effort to decide what to do next."
+  },
+  {
+    "id": "VH2",
+    "category": "Visual Hierarchy",
+    "theory": "Signal Detection Theory",
+    "concept": "Signal versus noise discrimination",
+    "issue": "Weak primary-action contrast",
+    "conditions": [
+      {"fact": "primary_action_contrast_score", "operator": "<=", "value": 2}
+    ],
+    "severity": "High",
+    "score": 3,
+    "recommendation": "Increase contrast, size, position, or spacing around the main action so it stands out clearly.",
+    "explanation": "A low contrast score means the important action is not visually distinct from surrounding interface noise."
+  },
+  {
+    "id": "VH3",
+    "category": "Visual Hierarchy",
+    "theory": "Max Wertheimer - Gestalt Principles",
+    "concept": "Perceptual grouping",
+    "issue": "Poor visual hierarchy rating",
+    "conditions": [
+      {"fact": "visual_hierarchy_rating", "operator": "<=", "value": 2}
+    ],
+    "severity": "High",
+    "score": 3,
+    "recommendation": "Use size, contrast, proximity, alignment, and spacing to create a clear order of importance.",
+    "explanation": "A very low hierarchy rating suggests users may not know which content or action matters first."
+  },
+  {
+    "id": "VH4",
+    "category": "Visual Hierarchy",
+    "theory": "Max Wertheimer - Gestalt Principles",
+    "concept": "Perceptual grouping",
+    "issue": "Borderline visual hierarchy",
+    "conditions": [
+      {"fact": "visual_hierarchy_rating", "operator": "==", "value": 3}
+    ],
+    "severity": "Medium",
+    "score": 2,
+    "recommendation": "Improve spacing and emphasize the most important content or button more clearly.",
+    "explanation": "A middle hierarchy rating means the layout is usable but still not immediately clear."
+  },
+  {
+    "id": "CS1",
+    "category": "Consistency",
+    "theory": "Schema Theory",
+    "concept": "Mental models and expectations",
+    "issue": "High label inconsistency",
+    "conditions": [
+      {"fact": "inconsistent_labels_count", "operator": ">=", "value": 3}
+    ],
+    "severity": "High",
+    "score": 3,
+    "recommendation": "Standardise labels so the same action always uses the same wording.",
+    "explanation": "Three or more inconsistent labels can break user expectations and force relearning."
+  },
+  {
+    "id": "CS2",
+    "category": "Consistency",
+    "theory": "Recognition Priming",
+    "concept": "Pattern familiarity",
+    "issue": "Moderate label inconsistency",
+    "conditions": [
+      {"fact": "inconsistent_labels_count", "operator": ">=", "value": 1},
+      {"fact": "inconsistent_labels_count", "operator": "<=", "value": 2}
+    ],
+    "severity": "Medium",
+    "score": 2,
+    "recommendation": "Rename similar actions consistently across screens.",
+    "explanation": "Even one or two inconsistent labels can make users pause and question whether actions are different."
+  },
+  {
+    "id": "CS3",
+    "category": "Consistency",
+    "theory": "Habit Formation Theory",
+    "concept": "Automaticity",
+    "issue": "Repeated layout inconsistency",
+    "conditions": [
+      {"fact": "layout_inconsistency_count", "operator": ">=", "value": 2}
+    ],
+    "severity": "High",
+    "score": 3,
+    "recommendation": "Use a consistent layout pattern for similar pages and repeated tasks.",
+    "explanation": "Repeated layout changes prevent users from forming efficient interaction habits."
+  },
+  {
+    "id": "CS4",
+    "category": "Consistency",
+    "theory": "Habit Formation Theory",
+    "concept": "Automaticity",
+    "issue": "Navigation position changes",
+    "conditions": [
+      {"fact": "navigation_position_changes", "operator": "==", "value": "Yes"}
+    ],
+    "severity": "Medium",
+    "score": 2,
+    "recommendation": "Keep navigation in the same location across pages.",
+    "explanation": "Moving navigation forces users to search again instead of relying on learned placement."
+  },
+  {
+    "id": "RR1",
+    "category": "Recognition vs Recall",
+    "theory": "Recognition over Recall Principle",
+    "concept": "Recognition is easier than recall",
+    "issue": "High recall burden",
+    "conditions": [
+      {"fact": "items_to_remember", "operator": ">=", "value": 5}
+    ],
+    "severity": "High",
+    "score": 3,
+    "recommendation": "Show previous selections, summaries, examples, and contextual hints instead of forcing users to remember them.",
+    "explanation": "Remembering five or more items creates a high memory burden for beginner users."
+  },
+  {
+    "id": "RR2",
+    "category": "Recognition vs Recall",
+    "theory": "Encoding Specificity Theory",
+    "concept": "Context-dependent retrieval",
+    "issue": "Important information hidden across screens",
+    "conditions": [
+      {"fact": "hidden_info_screens", "operator": ">=", "value": 2}
+    ],
+    "severity": "Medium",
+    "score": 2,
+    "recommendation": "Keep important information visible or repeat it where users need to make decisions.",
+    "explanation": "Information hidden across multiple screens forces users to retrieve context from memory."
+  },
+  {
+    "id": "RR3",
+    "category": "Recognition vs Recall",
+    "theory": "Long-term vs Working Memory Theory",
+    "concept": "Memory retrieval cost",
+    "issue": "No hints while memory demand exists",
+    "conditions": [
+      {"fact": "items_to_remember", "operator": ">=", "value": 3},
+      {"fact": "labels_hints_visible", "operator": "==", "value": "No"}
+    ],
+    "severity": "High",
+    "score": 3,
+    "recommendation": "Add labels, helper text, summaries, or examples so users can recognise information instead of recalling it.",
+    "explanation": "When users must remember several items and no hints are visible, the interface becomes recall-heavy."
+  },
+  {
+    "id": "EP1",
+    "category": "Error Prevention",
+    "theory": "Human Error Theory",
+    "concept": "Slips and mistakes",
+    "issue": "Destructive action lacks confirmation",
+    "conditions": [
+      {"fact": "destructive_without_confirmation", "operator": "==", "value": "Yes"}
+    ],
+    "severity": "High",
+    "score": 3,
+    "recommendation": "Add confirmation, undo, or a clear warning before destructive actions.",
+    "explanation": "Without confirmation, users can accidentally perform irreversible or harmful actions."
+  },
+  {
+    "id": "EP2",
+    "category": "Error Prevention",
+    "theory": "Norman's Gulf of Execution",
+    "concept": "Action-intention mismatch",
+    "issue": "Missing form validation",
+    "conditions": [
+      {"fact": "form_validation_present", "operator": "==", "value": "No"}
+    ],
+    "severity": "High",
+    "score": 3,
+    "recommendation": "Add real-time or pre-submit validation with clear guidance.",
+    "explanation": "Missing validation allows users to submit incorrect input without early correction."
+  },
+  {
+    "id": "EP3",
+    "category": "Error Prevention",
+    "theory": "Affordance Theory",
+    "concept": "Perceived action possibilities",
+    "issue": "Risky actions are placed too close to safe actions",
+    "conditions": [
+      {"fact": "risky_actions_near_safe_actions", "operator": "==", "value": "Yes"}
+    ],
+    "severity": "Medium",
+    "score": 2,
+    "recommendation": "Separate risky actions from common safe actions and style them differently.",
+    "explanation": "Close placement of risky and safe actions increases accidental-click risk."
+  },
+  {
+    "id": "FR1",
+    "category": "Feedback & Recovery",
+    "theory": "Feedback Loop Theory",
+    "concept": "Immediate system response",
+    "issue": "Slow feedback after action",
+    "conditions": [
+      {"fact": "feedback_delay_seconds", "operator": ">", "value": 2.0}
+    ],
+    "severity": "High",
+    "score": 3,
+    "recommendation": "Show immediate loading, success, or failure feedback after user actions.",
+    "explanation": "Feedback delays longer than two seconds can make users uncertain whether the system received the action."
+  },
+  {
+    "id": "FR2",
+    "category": "Feedback & Recovery",
+    "theory": "Norman's Gulf of Evaluation",
+    "concept": "Interpreting system state",
+    "issue": "Unclear error message",
+    "conditions": [
+      {"fact": "error_message_clarity_score", "operator": "<=", "value": 2}
+    ],
+    "severity": "High",
+    "score": 3,
+    "recommendation": "Rewrite error messages to state what happened, why it happened, and how the user can fix it.",
+    "explanation": "A low error-message clarity score means users may not understand how to recover."
+  },
+  {
+    "id": "FR3",
+    "category": "Feedback & Recovery",
+    "theory": "Reinforcement Learning",
+    "concept": "Action-outcome learning",
+    "issue": "No undo or retry path",
+    "conditions": [
+      {"fact": "undo_retry_available", "operator": "==", "value": "No"}
+    ],
+    "severity": "Medium",
+    "score": 2,
+    "recommendation": "Provide undo, retry, back, edit, or restore options for failed or risky actions.",
+    "explanation": "Without recovery options, users cannot easily correct mistakes or learn from outcomes."
+  },
+  {
+    "id": "FR4",
+    "category": "Feedback & Recovery",
+    "theory": "Feedback Loop Theory",
+    "concept": "System response timing",
+    "issue": "Moderate feedback delay",
+    "conditions": [
+      {"fact": "feedback_delay_seconds", "operator": ">", "value": 1.0},
+      {"fact": "feedback_delay_seconds", "operator": "<=", "value": 2.0}
+    ],
+    "severity": "Medium",
+    "score": 2,
+    "recommendation": "Use loading indicators or small status messages when feedback is not immediate.",
+    "explanation": "A delay between one and two seconds is not severe, but visible feedback still helps reduce uncertainty."
+  },
+  {
+    "id": "NC1",
+    "category": "Navigation Clarity",
+    "theory": "Wayfinding Theory",
+    "concept": "Orientation and route planning",
+    "issue": "Main task requires too many clicks",
+    "conditions": [
+      {"fact": "clicks_to_main_task", "operator": ">", "value": 3}
+    ],
+    "severity": "Medium",
+    "score": 2,
+    "recommendation": "Move important tasks closer to the starting page or provide shortcuts.",
+    "explanation": "More than three clicks for a main task weakens route planning and increases navigation effort."
+  },
+  {
+    "id": "NC2",
+    "category": "Navigation Clarity",
+    "theory": "Cognitive Map Theory",
+    "concept": "Spatial mental representation",
+    "issue": "No current-location indicator",
+    "conditions": [
+      {"fact": "current_location_visible", "operator": "==", "value": "No"}
+    ],
+    "severity": "Medium",
+    "score": 2,
+    "recommendation": "Add page titles, breadcrumbs, active menu states, or progress indicators.",
+    "explanation": "Users need location cues to build a mental map of where they are in the interface."
+  },
+  {
+    "id": "NC3",
+    "category": "Navigation Clarity",
+    "theory": "Information Scent Theory",
+    "concept": "Predicting navigation outcomes",
+    "issue": "Vague menu labels",
+    "conditions": [
+      {"fact": "menu_label_clarity_score", "operator": "<=", "value": 2}
+    ],
+    "severity": "High",
+    "score": 3,
+    "recommendation": "Rename menu items so users can predict what each option contains before clicking.",
+    "explanation": "Very unclear labels reduce information scent and make users guess where to go."
+  },
+  {
+    "id": "NC4",
+    "category": "Navigation Clarity",
+    "theory": "Information Scent Theory",
+    "concept": "Predicting navigation outcomes",
+    "issue": "Borderline menu clarity",
+    "conditions": [
+      {"fact": "menu_label_clarity_score", "operator": "==", "value": 3}
+    ],
+    "severity": "Medium",
+    "score": 2,
+    "recommendation": "Make menu labels more specific and task-oriented.",
+    "explanation": "A middle clarity score means some users may still hesitate before choosing a route."
+  },
+  {
+    "id": "RD1",
+    "category": "Readability",
+    "theory": "Perceptual Fluency Theory",
+    "concept": "Ease of cognitive processing",
+    "issue": "Small text size",
+    "conditions": [
+      {"fact": "smallest_font_size", "operator": "<", "value": 14}
+    ],
+    "severity": "Medium",
+    "score": 2,
+    "recommendation": "Increase small body text to at least 14px, preferably 16px for normal content.",
+    "explanation": "Small text increases visual effort and slows comprehension."
+  },
+  {
+    "id": "RD2",
+    "category": "Readability",
+    "theory": "Attention Theory",
+    "concept": "Selective attention limitations",
+    "issue": "Dense text block",
+    "conditions": [
+      {"fact": "longest_text_block_lines", "operator": ">", "value": 5}
+    ],
+    "severity": "Medium",
+    "score": 2,
+    "recommendation": "Break long text into shorter paragraphs, bullets, headings, or progressive disclosure.",
+    "explanation": "Long unbroken text blocks increase scanning effort and attentional fatigue."
+  },
+  {
+    "id": "RD3",
+    "category": "Readability",
+    "theory": "Perceptual Fluency Theory",
+    "concept": "Processing fluency",
+    "issue": "Low text/background contrast",
+    "conditions": [
+      {"fact": "contrast_score", "operator": "<=", "value": 2}
+    ],
+    "severity": "High",
+    "score": 3,
+    "recommendation": "Increase contrast between text, icons, buttons, and background.",
+    "explanation": "Low contrast makes content harder to detect and process."
+  },
+  {
+    "id": "RD4",
+    "category": "Readability",
+    "theory": "Dual Coding Theory",
+    "concept": "Text and visual integration",
+    "issue": "Weak text-visual balance",
+    "conditions": [
+      {"fact": "text_visual_balance_score", "operator": "<=", "value": 2}
+    ],
+    "severity": "Medium",
+    "score": 2,
+    "recommendation": "Support dense text with icons, spacing, examples, or simple visuals where useful.",
+    "explanation": "Poor text-visual balance can reduce comprehension and retention."
+  }
+]

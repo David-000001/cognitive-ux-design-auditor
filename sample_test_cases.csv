@@ -1,0 +1,5 @@
+Test ID,Scenario,screen_type,main_options,grouped_options,task_steps,unrelated_info_blocks,primary_cta_count,primary_action_contrast_score,visual_hierarchy_rating,inconsistent_labels_count,layout_inconsistency_count,navigation_position_changes,items_to_remember,hidden_info_screens,labels_hints_visible,destructive_without_confirmation,form_validation_present,risky_actions_near_safe_actions,feedback_delay_seconds,error_message_clarity_score,undo_retry_available,clicks_to_main_task,current_location_visible,menu_label_clarity_score,smallest_font_size,longest_text_block_lines,contrast_score,text_visual_balance_score,Expected Risk
+T1,Balanced / mostly good UI,Checkout form,4,Yes,2,1,1,5,5,0,0,No,1,0,Yes,No,Yes,No,0.5,5,Yes,2,Yes,5,16,3,5,5,Low
+T2,Overloaded dashboard,Admin dashboard,12,No,5,5,4,2,2,3,2,Yes,2,1,Yes,No,Yes,No,3.0,3,Yes,5,No,2,12,7,3,2,High
+T3,Weak form validation,Registration form,6,No,4,2,1,4,4,1,0,No,5,2,No,Yes,No,Yes,2.5,1,No,3,Yes,4,14,4,4,4,High
+T4,Poor readability screen,Policy / instruction page,3,Yes,2,1,1,3,3,0,0,No,2,0,Yes,No,Yes,No,1.2,4,Yes,2,Yes,4,11,10,2,2,High
