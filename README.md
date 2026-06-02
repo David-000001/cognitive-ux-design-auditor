@@ -1,4 +1,4 @@
-# Cognitive UX Design Auditor - Improved Expert System Version
+# Cognitive UX Design Auditor -  Expert System Version
 
 ## Project title
 
