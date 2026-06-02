@@ -105,9 +105,6 @@ Expected result:
 All tests passed.
 ```
 
-## Recommended demo scenario
-
-Use **Overloaded dashboard**.
 
 Expected result:
 
@@ -115,8 +112,3 @@ Expected result:
 - Many rules fire across Cognitive Load, Visual Hierarchy, Consistency, Navigation Clarity, Feedback & Recovery, and Readability
 - Reasoning Trace tab shows exactly why each rule fired
 
-## Correct way to explain the project
-
-This is a **rule-based expert system prototype**, not a machine learning system. It does not automatically inspect screenshots. It audits a UI based on user-provided measurable facts and expert IF-THEN rules.
-
-The strongest part of the project is explainability: the system does not only say that a UI is risky; it shows the facts, rules, theory, reasoning trace, severity, and recommendation.
